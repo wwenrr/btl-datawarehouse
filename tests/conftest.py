@@ -18,8 +18,35 @@ def _write_csv(path: Path, rows: list[list[str]]) -> None:
         writer.writerows(rows)
 
 
+def _snapshot_file(path: Path) -> bytes | None:
+    if not path.exists():
+        return None
+    return path.read_bytes()
+
+
+def _restore_file(path: Path, content: bytes | None) -> None:
+    if content is None:
+        if path.exists():
+            path.unlink()
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(content)
+
+
 @pytest.fixture(scope="session", autouse=True)
-def setup_sample_data() -> None:
+def setup_sample_data():
+    tracked_files = [
+        ROOT / "data/raw/orders.csv",
+        ROOT / "data/raw/order_products__prior.csv",
+        ROOT / "data/raw/order_products__train.csv",
+        ROOT / "data/raw/products.csv",
+        ROOT / "data/raw/aisles.csv",
+        ROOT / "data/raw/departments.csv",
+        ROOT / "data/seed/branches.csv",
+        ROOT / "data/warehouse/instacart.duckdb",
+    ]
+    snapshots = {path: _snapshot_file(path) for path in tracked_files}
+
     _write_csv(
         ROOT / "data/raw/orders.csv",
         [
@@ -68,9 +95,14 @@ def setup_sample_data() -> None:
     if db.exists():
         db.unlink()
 
-    run_stage("bronze", with_quality=False)
-    run_stage("silver", with_quality=False)
-    run_stage("gold", with_quality=False)
+    try:
+        run_stage("bronze", with_quality=False)
+        run_stage("silver", with_quality=False)
+        run_stage("gold", with_quality=False)
+        yield
+    finally:
+        for path, content in snapshots.items():
+            _restore_file(path, content)
 
 
 @pytest.fixture()

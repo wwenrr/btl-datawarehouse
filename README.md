@@ -15,6 +15,8 @@ python etl.py --stage bronze
 python etl.py --stage silver
 python etl.py --stage gold
 python etl.py --stage all
+# chạy nhẹ máy: chỉ nạp N dòng mỗi bảng bronze
+python etl.py --stage all --sample-rows 100
 ```
 
 ## Test
