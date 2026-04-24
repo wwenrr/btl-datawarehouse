@@ -1,0 +1,1 @@
+-- Bronze tables are created by CTAS from raw CSV in load_raw_csv.sql/run_etl.py.

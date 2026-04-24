@@ -1,0 +1,1 @@
+-- Raw ingestion SQL is executed in etl/jobs/run_etl.py to support incremental logic.

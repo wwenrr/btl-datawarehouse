@@ -1,0 +1,3 @@
+database_path: data/warehouse/instacart.duckdb
+raw_data_dir: data/raw
+seed_data_dir: data/seed
