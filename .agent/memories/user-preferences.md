@@ -8,3 +8,6 @@ Khi user yêu cầu update memory, ưu tiên cập nhật đầy đủ và chi t
 
 ### [2026-04-24 23:22] - Ưu tiên style theo clean-code-python
 User muốn agent tham chiếu guideline từ `https://github.com/zedr/clean-code-python` khi viết Python để giữ style code sạch và nhất quán.
+
+### [2026-04-24 23:38] - Không dùng text icon
+User ghét text icon trong câu trả lời, ưu tiên viết plain text gọn rõ, không chèn icon ký tự kiểu cảm xúc/trang trí.
