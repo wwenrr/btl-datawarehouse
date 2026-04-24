@@ -3,3 +3,8 @@ __pycache__/
 *.pyc
 data/warehouse/
 .venv/
+
+tmp
+!tmp/.keep
+
+!.keep

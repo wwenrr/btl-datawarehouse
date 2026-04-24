@@ -11,3 +11,12 @@ Khi agent làm sai và user kêu sửa: nếu lỗi chỉ là one-off thì sửa
 
 ### [2026-04-24 21:00] - Model sub-agent khi update agent rule/memory
 Khi update agent rule/memory bằng sub-agent, ưu tiên dùng `gpt-5.4-mini` nếu môi trường hỗ trợ. Nếu môi trường không hỗ trợ/expose model này, nói rõ limitation và dùng model/sub-agent khả dụng gần nhất; main agent kiểm tra kết quả trước khi báo user.
+
+### [2026-04-24 23:18] - Workflow tạo Copilot instructions cho repo
+Khi user yêu cầu tạo `.github/copilot-instructions.md`, cần quét README + AGENTS + docs data contract + ETL orchestrator/test để rút ra lệnh chuẩn, kiến trúc big-picture, và convention không hiển nhiên; nếu file chưa tồn tại thì tạo mới.
+
+### [2026-04-24 23:19] - Workflow update memory chi tiết khi user yêu cầu
+Khi user yêu cầu “update nhiều”, cần cập nhật đồng thời nhiều memory file liên quan (project-context, workflows, decisions, coding-style, user-preferences nếu phù hợp) rồi đồng bộ lại summary trong `.agent/memory.md`.
+
+### [2026-04-24 23:19] - Workflow đồng bộ copilot-instructions với memory
+Sau khi tạo/cập nhật `.github/copilot-instructions.md`, ghi lại các điểm chính vào memory để lần sau không phải phân tích lại từ đầu: command chuẩn, kiến trúc ETL, convention chất lượng dữ liệu.

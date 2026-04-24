@@ -18,3 +18,8 @@ File này là entrypoint/index bắt buộc đọc trước mỗi task. Chỉ đ
 - Khi update/bổ sung rule hoặc memory vận hành, ưu tiên dùng sub-agent cập nhật file nếu môi trường cho phép; main agent kiểm tra và tổng hợp.
 - Khi agent làm sai và user kêu sửa: lỗi one-off thì sửa không lưu; preference/rule/workflow lặp lại thì hỏi xác nhận trước khi lưu; nếu user nói rõ “rút kinh nghiệm/nhớ lần sau/đừng làm vậy nữa” hoặc tương đương thì ghi thẳng vào memory phù hợp.
 - Khi update agent rule/memory bằng sub-agent, ưu tiên `gpt-5.4-mini` nếu môi trường hỗ trợ; nếu môi trường không hỗ trợ/expose model này thì nói limitation, dùng model/sub-agent khả dụng gần nhất, và main agent kiểm tra kết quả.
+- Repo đã có `.github/copilot-instructions.md` tổng hợp command ETL/test, kiến trúc Bronze/Silver/Gold, và convention chính cho Copilot session sau.
+- Copilot instructions được xem là tài liệu vận hành chuẩn; nếu đã tồn tại thì ưu tiên cập nhật/mở rộng thay vì thay mới toàn bộ.
+- Workflow update memory khi user muốn “update nhiều”: cập nhật nhiều file memory liên quan và đồng bộ summary trong index.
+- User ưu tiên mức độ cập nhật memory chi tiết, không chỉ ghi tối thiểu.
+- Khi viết Python, user muốn agent tham chiếu `zedr/clean-code-python` làm guideline style (ưu tiên readability/refactorability, không áp dụng máy móc).
