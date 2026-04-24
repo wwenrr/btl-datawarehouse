@@ -23,3 +23,4 @@ File này là entrypoint/index bắt buộc đọc trước mỗi task. Chỉ đ
 - Workflow update memory khi user muốn “update nhiều”: cập nhật nhiều file memory liên quan và đồng bộ summary trong index.
 - User ưu tiên mức độ cập nhật memory chi tiết, không chỉ ghi tối thiểu.
 - Khi viết Python, user muốn agent tham chiếu `zedr/clean-code-python` làm guideline style (ưu tiên readability/refactorability, không áp dụng máy móc).
+- User ghét text icon trong câu trả lời; ưu tiên plain text gọn, rõ, không chèn icon ký tự trang trí.
