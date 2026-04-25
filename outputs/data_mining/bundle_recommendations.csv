@@ -1,0 +1,8 @@
+bundle_products,recommended_product,support,confidence,lift,recommendation
+"Limes, Organic Hass Avocado",Organic Cilantro,0.005336179295624333,0.625,21.689814814814813,"Bundle Limes, Organic Hass Avocado with Organic Cilantro for cross-sell."
+Blackberries,Raspberries,0.005336179295624333,0.4166666666666667,17.74621212121212,Bundle Blackberries with Raspberries for cross-sell.
+Raspberries,Blackberries,0.005336179295624333,0.22727272727272727,17.74621212121212,Bundle Raspberries with Blackberries for cross-sell.
+"Limes, Organic Baby Spinach",Organic Garnet Sweet Potato (Yam),0.005336179295624333,0.38461538461538464,17.161172161172164,"Bundle Limes, Organic Baby Spinach with Organic Garnet Sweet Potato (Yam) for cross-sell."
+Organic Small Bunch Celery,Organic Italian Parsley Bunch,0.005336179295624333,0.29411764705882354,13.779411764705882,Bundle Organic Small Bunch Celery with Organic Italian Parsley Bunch for cross-sell.
+Organic Italian Parsley Bunch,Organic Small Bunch Celery,0.005336179295624333,0.25,13.779411764705882,Bundle Organic Italian Parsley Bunch with Organic Small Bunch Celery for cross-sell.
+"Organic Cilantro, Organic Hass Avocado",Limes,0.005336179295624333,0.625,13.30965909090909,"Bundle Organic Cilantro, Organic Hass Avocado with Limes for cross-sell."

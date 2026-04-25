@@ -1,0 +1,38 @@
+section,metric,label,value
+overall,order_product_rows,all,10000.0
+overall,basket_count,all,978.0
+overall,unique_products,all,4622.0
+overall,avg_basket_size,all,10.2249
+overall,median_basket_size,all,8.0
+overall,max_basket_size,all,54.0
+overall,reordered_rate,all,0.6014
+top_product,line_count,Banana,139.0
+top_product,line_count,Bag of Organic Bananas,104.0
+top_product,line_count,Organic Strawberries,84.0
+top_product,line_count,Organic Baby Spinach,78.0
+top_product,line_count,Organic Hass Avocado,62.0
+top_product,line_count,Large Lemon,55.0
+top_product,line_count,Strawberries,54.0
+top_product,line_count,Organic Avocado,46.0
+top_product,line_count,Limes,44.0
+top_product,line_count,Organic Yellow Onion,42.0
+top_department,line_count,produce,2971.0
+top_department,line_count,dairy eggs,1571.0
+top_department,line_count,snacks,844.0
+top_department,line_count,beverages,793.0
+top_department,line_count,frozen,768.0
+top_department,line_count,pantry,593.0
+top_department,line_count,canned goods,356.0
+top_department,line_count,bakery,333.0
+top_department,line_count,deli,330.0
+top_department,line_count,dry goods pasta,295.0
+top_aisle,line_count,fresh vegetables,1111.0
+top_aisle,line_count,fresh fruits,1091.0
+top_aisle,line_count,packaged vegetables fruits,553.0
+top_aisle,line_count,yogurt,388.0
+top_aisle,line_count,packaged cheese,329.0
+top_aisle,line_count,water seltzer sparkling water,260.0
+top_aisle,line_count,milk,254.0
+top_aisle,line_count,chips pretzels,211.0
+top_aisle,line_count,soy lactosefree,196.0
+top_aisle,line_count,frozen produce,173.0
