@@ -1,5 +1,6 @@
 import argparse
 import subprocess
+import sys
 import uuid
 from pathlib import Path
 
@@ -176,7 +177,7 @@ def run_gold(conn: duckdb.DuckDBPyConnection) -> int:
 
 
 def run_quality_checks() -> None:
-    subprocess.run(["pytest", "tests/quality", "-q"], cwd=ROOT, check=True)
+    subprocess.run([sys.executable, "-m", "pytest", "tests/quality", "-q"], cwd=ROOT, check=True)
 
 
 def run_stage(stage: str, with_quality: bool = True, sample_rows: int | None = None) -> None:
